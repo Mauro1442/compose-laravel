@@ -1,8 +1,10 @@
 
-create larvel app:
+to create larvel app:
 
 docker-compose run --rm -u $(id -u):$(id -g) composer create-project laravel/laravel .
 
-run compose:
+config database env
+
+to run compose:
 
 docker-compose up -d --build server php mysql
