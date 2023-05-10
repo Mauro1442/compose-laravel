@@ -1,9 +1,18 @@
 
 to create larvel app:
 
-docker-compose run --rm -u $(id -u):$(id -g) composer create-project laravel/laravel .
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel:^8.0
 
-config database env
+checck folder
+
+config database env:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
 
 to run compose:
 
