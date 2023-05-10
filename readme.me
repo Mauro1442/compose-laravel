@@ -1,4 +1,8 @@
 
-start container:
+create larvel app:
 
-docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+docker-compose run --rm -u $(id -u):$(id -g) composer create-project laravel/laravel .
+
+run compose:
+
+docker-compose up -d --build server php mysql
