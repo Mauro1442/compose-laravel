@@ -1,22 +1,22 @@
 
 to create larvel app:
 
-docker-compose run --rm composer create-project --prefer-dist laravel/laravel:^8.0
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel
 
 checck folder
 
 config database env:
 
-DB_CONNECTION=mysql
+DB_CONNECTION=mariadb
 DB_HOST=127.0.0.1
-DB_PORT=3307
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=laravel
+DB_PASSWORD=laravel
 
 to run compose:
 
-docker-compose up -d --build server php mysql
+docker-compose up -d --build server php mariadb
 
 migrations:
 
